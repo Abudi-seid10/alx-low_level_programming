@@ -12,21 +12,20 @@ int main(void)
 	{
 		for (b = '0'; b <= '9'; b++)
 		{
-		    for (c = '0'; c <= '9'; c++)
-            {
-                if (c > b && b > a)
-                    {
-                        if (!(a == '0' && b == '1' && c == '2'))
-                            {
-                                putchar(',');
-                                putchar(' ');
-                            }
-                            putchar(a);
-                            putchar(b);
-                            putchar(c);
-                    }
-
-            }
+			for (c = '0'; c <= '9'; c++)
+			{
+				if (c > b && b > a)
+				{
+					if (!(a == '0' && b == '1' && c == '2'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					putchar(a);
+					putchar(b);
+					putchar(c);
+				}
+			}
 		}
 	}
 	putchar('\n');
