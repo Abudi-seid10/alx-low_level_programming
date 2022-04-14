@@ -11,8 +11,6 @@ void print_numbers(void)
 	{
 		if (i != 2 || i != 4)
 			_putchar(i);
-		else 
-			continue();
 	}
 	_putchar('\n');
 }
