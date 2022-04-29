@@ -1,2 +1,1 @@
-Alx project
-0x09-static_libraries
+Ox09 Static Libraries task
