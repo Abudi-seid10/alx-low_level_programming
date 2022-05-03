@@ -1,45 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
- * _strdup - main
- * Return: 0
- * @str: var 1
+ * _strlen - return length of a string
+ *
+ * @s: char type
+ * Return:  length of string
  */
-char *_strdup(char *str)
+int _strlen(char *s)
 {
-	char *p;
-	char *x;
-	int i, j;
-	int count = 0;
+	int a;
 
-	j = 0;
-	while (str[j] != '\0')
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		count++;
-		j++;
-	}
 
-	p = (char *)malloc(count * sizeof(char) + 1);
-	if (p == NULL)
-	{
-		printf("Error");
 	}
-	else if (str != NULL)
-	{
-		i = 0;
-		while (i <= count)
-		{
-			p[i] = str[i];
-			i++;
-		}
-	}
-	else
-	{
-		x = "Failed to allocate memory\n";
-		p = x;
-		return (p);
-	}
-	return (p);
+	return (a);
 }
 
+/**
+ * *_strdup - function to return pointer to string
+ * @str: pointer to string array input
+ * Return: pointer to string created
+ */
+
+char *_strdup(char *str)
+{
+	char *ptr;
+	int size;
+	int x;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	size = _strlen(str) + 1;
+	ptr = malloc(size * sizeof(char));
+
+	x = 0;
+	while (x < size)
+	{
+		if (ptr == NULL)
+		{
+			return (NULL);
+	}
+		ptr[x] = str[x];
+		x++;
+	}
+	return (ptr);
+}
